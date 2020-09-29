@@ -100,7 +100,7 @@ async def status_message_f(client, message):
 async def cancel_message_f(client, message):
     if len(message.command) > 1:
         # /cancel command
-        i_m_s_e_g = await message.reply_text("Checking ...", quote=True)
+        i_m_s_e_g = await message.reply_text("checking..?", quote=True)
         aria_i_p = await aria_start()
         g_id = message.command[1].strip()
         LOGGER.info(g_id)
@@ -164,7 +164,7 @@ async def exec_message_f(client, message):
 
 async def upload_document_f(client, message):
     imsegd = await message.reply_text(
-        "Processing ..."
+        "processing ..."
     )
     if message.from_user.id in AUTH_CHANNEL:
         if " " in message.text:

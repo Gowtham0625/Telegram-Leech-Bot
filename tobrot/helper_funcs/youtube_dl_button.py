@@ -45,7 +45,7 @@ async def youtube_dl_call_back(bot, update):
     if current_user_id != current_touched_user_id:
         await bot.answer_callback_query(
             callback_query_id=update.id,
-            text="You are not allowed to do this. This was uploaded by another member. Only he can choose this.",
+            text="who are you? 🤪🤔🤔🤔",
             show_alert=True,
             cache_time=0
         )

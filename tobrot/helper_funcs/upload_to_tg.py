@@ -98,8 +98,8 @@ async def upload_to_tg(
             d_f_s = humanbytes(os.path.getsize(local_file_name))
             i_m_s_g = await message.reply_text(
                 "Telegram does not support uploading this huge file.\n"
-                f"Detected File Size: {d_f_s} \n"
-                "\nTrying to split the files "
+                f"Detected File Size: {d_f_s} 😡\n"
+                "\nTrying to split the files 🌝🌝🌚"
             )
             splitted_dir = await split_large_files(local_file_name)
             totlaa_sleif = os.listdir(splitted_dir)
@@ -108,7 +108,7 @@ async def upload_to_tg(
             LOGGER.info(totlaa_sleif)
             ba_se_file_name = os.path.basename(local_file_name)
             await i_m_s_g.edit_text(
-                f"Detected File Size: {d_f_s} \n"
+                f"Detected File Size: {d_f_s} 😡\n"
                 f"<code>{ba_se_file_name}</code> splitted into {number_of_files} files.\n"
                 "Trying to upload to Telegram, now ..."
             )
@@ -179,7 +179,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
             button.append([pyrogram.InlineKeyboardButton(text="☁️ Index Website URL ☁️", url=f"{tam_link}")])
         button_markup = pyrogram.InlineKeyboardMarkup(button)
         await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
-        await messa_ge.reply_text(f"🤖: {file_upload} has been Uploaded successfully to @AbirHasan2005's Cloud <a href='tg://user?id={g_id}'></a>\n📀 Size: {gjay} \n\nYou can get them on Index Website ☁️", reply_markup=button_markup)
+        await messa_ge.reply_text(f"🤖: {file_upload} has been Uploaded successfully to @AbirHasan2005's Cloud <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay} \n\nYou can get them on Index Website ☁️", reply_markup=button_markup)
         #await message.edit_text(f"""🤖: {file_upload} has been Uploaded successfully to @AbirHasan2005's cloud 🤒\n\n☁️ Cloud URL:  <a href="{gau_link}">FileLink</a>\nℹ️ Direct URL:  <a href="{tam_link}">IndexLink</a>""")
         os.remove(file_upload)
         await del_it.delete()
@@ -222,7 +222,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
             button.append([pyrogram.InlineKeyboardButton(text="☁️ Index Website URL ☁️", url=f"{tam_link}")])
         button_markup = pyrogram.InlineKeyboardMarkup(button)
         await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
-        await messa_ge.reply_text(f"🤖: Folder has been Uploaded successfully to {tt} in @AbirHasan2005's Cloud <a href='tg://user?id={g_id}'></a>\n📀 Size: {gjay} \n\nYou can get them on Index Website ☁️", reply_markup=button_markup)
+        await messa_ge.reply_text(f"🤖: Folder has been Uploaded successfully to {tt} in @AbirHasan2005's Cloud <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay} \n\nYou can get them on Index Wensite ☁️", reply_markup=button_markup)
         #await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
         #await messa_ge.reply_text(f"""🤖: Folder has been Uploaded successfully to {tt} in your cloud 🤒\n\n☁️ Cloud URL:  <a href="{gau_link}">FolderLink</a>\nℹ️ Index Url:. <a href="{tam_link}">IndexLink</a>""")
         shutil.rmtree(file_upload)

@@ -32,7 +32,7 @@ async def button(bot, update: CallbackQuery):
         print(cb_data)
         if cb_data.startswith("cancel"):
             if len(cb_data) > 1:
-                i_m_s_e_g = await update.message.reply_text("Checking ...", quote=True)
+                i_m_s_e_g = await update.message.reply_text("checking..?", quote=True)
                 aria_i_p = await aria_start()
                 g_id = cb_data.split()[-1]
                 LOGGER.info(g_id)
@@ -46,7 +46,7 @@ async def button(bot, update: CallbackQuery):
                             shutil.rmtree(file_name)
                         else:
                             os.remove(file_name)
-                    await i_m_s_e_g.edit_text(f"Leech Cancelled by <a href='tg://user?id={update.from_user.id}'>{update.from_user.first_name}</a> \n\n @AbirHasan2005 Please review them. \n")
+                    await i_m_s_e_g.edit_text(f"Leech Cancelled by <a href='tg://user?id={update.from_user.id}'>{update.from_user.first_name}</a> \n\n @AbirHasan2005 Please review them!. \n")
                 except Exception as e:
                     await i_m_s_e_g.edit_text("<i>FAILED</i>\n\n" + str(e) + "\n#error")
                 else:
@@ -65,11 +65,11 @@ async def button(bot, update: CallbackQuery):
                             os.remove(f)
                         else:
                             shutil.rmtree(f)
-                    await update.message.edit_text(f"Deleted {len(g_del_list)} objects 😬 \n\n @AbirHasan2005 Please review them. \n")
+                    await update.message.edit_text(f"Deleted {len(g_del_list)} objects 😬 \n\n @AbirHasan2005 Please review them!. \n")
                 else:
-                    await update.message.edit_text("Nothing to clear 🙄 \n\n @AbirHasan2005 Please review them. \n")
+                    await update.message.edit_text("Nothing to clear 🙄 \n\n @AbirHasan2005 Please review them!. \n")
             else:
-                await update.message.edit_text("You are not allowed to do that !! \n\n @AbirHasan2005 Please review them. \n")
+                await update.message.edit_text("You are not allowed to do that !! \n\n @AbirHasan2005 Please review them!. \n")
         elif cb_data == "fuckoff":
             await update.message.edit_text("Okay! Fine.")
 				

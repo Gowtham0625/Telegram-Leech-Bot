@@ -94,7 +94,7 @@ def add_magnet(aria_instance, magnetic_link, c_file_name):
 
 def add_torrent(aria_instance, torrent_file_path):
     if torrent_file_path is None:
-        return False, "**FAILED** \n" + str(e) + " \nsomething happend wrong when trying to add <u>TORRENT</u> file. \n\n @AbirHasan2005 Please review this. \n"
+        return False, "**FAILED** \n" + str(e) + " \nsomething happend worng when trying to add <u>TORRENT</u> file. \n\n @AbirHasan2005 Please review this. \n"
     if os.path.exists(torrent_file_path):
         # Add Torrent Into Queue
         try:
@@ -172,7 +172,7 @@ async def call_apropriate_function(
                 None
             )
         else:
-            return False, "Ops, \nCan't get metadata \n@AbirHasan2005 Please review this! \n#stopped"
+            return False, "can't get metadata \n\n#stopped"
     await asyncio.sleep(1)
     file = aria_instance.get_download(err_message)
     to_upload_file = file.name
@@ -242,7 +242,7 @@ async def call_apropriate_function(
         if message_to_send != "":
             mention_req_user = f"<a href='tg://user?id={user_id}'>Your Requested Files</a>\n\n@AbirHasan2005 Please Review them!\n"
             message_to_send = mention_req_user + message_to_send
-            message_to_send = message_to_send + "\n" + "#uploads"
+            message_to_send = message_to_send + "\n\n" + "#uploads"
         else:
             message_to_send = "<i>FAILED</i> to upload files. 😞😞"
         await user_message.reply_text(
@@ -296,7 +296,7 @@ async def call_apropriate_function_g(
                 None
             )
         else:
-            return False, "Ops, \nCan't get metadata \n@AbirHasan2005 Please review them! \n#stopped"
+            return False, "can't get metadata \n\n#stopped"
     await asyncio.sleep(1)
     file = aria_instance.get_download(err_message)
     to_upload_file = file.name
@@ -445,9 +445,9 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                     pass
                 #
                 if is_file is None :
-                   msgg = f"Ping: {file.connections} <b>|</b> ID: <code>{gid}</code>"
+                   msgg = f"Conn: {file.connections} <b>|</b> GID: <code>{gid}</code>"
                 else :
-                   msgg = f"Peers: {file.connections} | Seeders: {file.num_seeders} <b>|</b> ID: <code>{gid}</code>"
+                   msgg = f"P: {file.connections} | S: {file.num_seeders} <b>|</b> GID: <code>{gid}</code>"
                 msg = f"\n`{downloading_dir_name}`"
                 msg += f"\n<b>Speed</b>: {file.download_speed_string()}"
                 msg += f"\n<b>Status</b>: {file.progress_string()} <b>of</b> {file.total_length_string()} <b>|</b> {file.eta_string()} <b>|</b> {msgg}"
