@@ -1,0 +1,8 @@
+aiohttp
+aria2p
+hachoir
+Pillow
+pyrogram
+tgcrypto
+git+https://github.com/gautamajay52/youtube-dl
+hurry.filesize
