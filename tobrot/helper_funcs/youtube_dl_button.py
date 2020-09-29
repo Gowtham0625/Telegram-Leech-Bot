@@ -45,7 +45,7 @@ async def youtube_dl_call_back(bot, update):
     if current_user_id != current_touched_user_id:
         await bot.answer_callback_query(
             callback_query_id=update.id,
-            text="who are you? 🤪🤔🤔🤔",
+            text="Sorry, only command sender can access this.",
             show_alert=True,
             cache_time=0
         )
@@ -180,7 +180,7 @@ async def youtube_dl_call_back(bot, update):
         dir_contents = len(os.listdir(tmp_directory_for_each_user))
         # dir_contents.sort()
         await update.message.edit_caption(
-            caption=f"found {dir_contents} files"
+            caption=f"Now uploading {dir_contents} file!"
         )
         user_id = update.from_user.id
         #
