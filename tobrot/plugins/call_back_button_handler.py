@@ -65,9 +65,9 @@ async def button(bot, update: CallbackQuery):
                             os.remove(f)
                         else:
                             shutil.rmtree(f)
-                    await update.message.edit_text(f"Deleted {len(g_del_list)} objects 😬 \n\n @AbirHasan2005 Please review them!. \n")
+                    await update.message.edit_text(f"Deleted {len(g_del_list)} objects 😬 \n\n @AbirHasan2005 reviewed them!. \n")
                 else:
-                    await update.message.edit_text("Nothing to clear 🙄 \n\n @AbirHasan2005 Please review them!. \n")
+                    await update.message.edit_text("Nothing to clear 🙄 ")
             else:
                 await update.message.edit_text("You are not allowed to do that !! \n\n @AbirHasan2005 Please review them!. \n")
         elif cb_data == "fuckoff":
