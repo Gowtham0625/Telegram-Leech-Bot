@@ -37,7 +37,10 @@ For any kind of help feel free to ask in my [Telegram Group](http://t.me/linux_r
 #### The Easy Way!
 Must [Fork](https://github.com/AbirHasan2005/Telegram-Leech-Bot/fork) this repo before deploying. And don't upload with your name without proper credit. For any kind of help must ask in my [Telegram Group](http://t.me/linux_repo). <a href="https://t.me/linux_repo"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a>
 
-#No-Deploy Need Deply [Fork This Repo](https://github.com/AbirHasan2005/Telegram-Leech-Bot)
+
+#No-Deploy Need Deploy [Fork This Repo](https://github.com/AbirHasan2005/Telegram-Leech-Bot)
+
+
 - Recently there is a problem with Heroku deployment. So try with a **Better Luck**. If need any help than must ask in my [Telegram Group](http://t.me/linux_repo).
 
 - Better to buy a Linux VPS like: Ubuntu or Kali Linux. Then deploy on it. If need any help then ask in my [Telegram Group](http://t.me/linux_repo) or in [GBotStore](https://t.me/joinchat/ICUArRi8B6VNedA20RS-sw).
