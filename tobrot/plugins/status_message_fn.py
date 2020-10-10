@@ -61,9 +61,9 @@ async def status_message_f(client, message):
         e_t_a = str(download.eta_string())
         current_gid = str(download.gid)
         #
-        msg += f"<u>{downloading_dir_name}</u>"
+        msg += f"📝 <u>{downloading_dir_name}</u>"
         msg += " | "
-        msg += f"{total_length_size}"
+        msg += f"💾 {total_length_size}"
         msg += " | "
         msg += f"{progress_percent_string}"
         msg += " | "
@@ -73,10 +73,12 @@ async def status_message_f(client, message):
         msg += " | "
         msg += f"{e_t_a}"
         msg += " | "
-        msg += f"{download_current_status}"
+        msg += f"🛠️ {download_current_status}"
         msg += " | "
         msg += f"<code>/cancel {current_gid}</code>"
         msg += " | "
+        msg +=f"<b> © Powered By : @Discovery_Movies </b>"
+        msg += "|"
         msg += "\n\n"
     LOGGER.info(msg)
 
@@ -89,8 +91,8 @@ async def status_message_f(client, message):
     used = humanbytes(used)
     free = humanbytes(free)
 
-    ms_g = f"<b>Bot Uptime</b>: <code>{currentTime}</code>\n" \
-        f"<b>Total disk space</b>: <code>{total}</code>\n" \
+    ms_g = f"<b>🤖 Bot Uptime</b>: <code>{currentTime}</code>\n" \
+        f"<b>💽 Total disk space</b>: <code>{total}</code>\n" \
         f"<b>Used</b>: <code>{used}</code>\n" \
         f"<b>Free</b>: <code>{free}</code>\n"
 
